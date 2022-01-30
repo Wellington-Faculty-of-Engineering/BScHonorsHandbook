@@ -1,0 +1,55 @@
+import os
+import os.path
+import glob
+
+SRC_DIR = '.'
+OUT_DIR = '../out'
+FIG_DIR = '../fig'
+TMP_DIR = '../tmp'
+
+# List _seperate_ files that must be compiled.
+
+# 2012
+LATEX_PROJECT = ['handbook']
+
+env = Environment(ENV=os.environ)
+MY_WINDOWS_LATEX_FLAGS = '-quiet\
+                 -interaction=nonstopmode\
+                 -src-specials\
+                 -max-print-line=100\
+                 -aux-directory=' + TMP_DIR + \
+                 ' -output-directory=' + OUT_DIR
+
+MY_LATEX_FLAGS = '-interaction=nonstopmode\
+                 -src-specials\
+                 -output-directory=' + TMP_DIR
+
+# Add any flags that apply only to one output type.
+env.Replace(PDFLATEXFLAGS=MY_LATEX_FLAGS + ' --shell-escape')
+env.Replace(LATEXFLAGS=MY_LATEX_FLAGS + '')
+
+## LaTeX builds ----------------------------------------------------------------
+
+for this_source in LATEX_PROJECT:
+  output = env.PDF(os.path.join(TMP_DIR, this_source + '.pdf'), os.path.join(SRC_DIR, this_source + '.tex'))
+  env.Install(OUT_DIR, output)
+
+
+# ------------------------------------------------------------------------------
+env.Alias('build_all', '..')
+
+Decider('MD5-timestamp')
+
+# Build figures ----------------------------------------------------------------
+# SConscript(['../fig/Sconscript']
+
+# Get list of svg files in figures directory.
+# Make .eps files from .svg
+
+# Get list of python files in figures directory.
+# Make .eps files from .py
+
+# Get list of matlab files in figures directory.
+# Make .eps files from .m
+
+# Make .pdf from .eps

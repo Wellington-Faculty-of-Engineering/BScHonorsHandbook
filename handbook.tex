@@ -1,0 +1,138 @@
+%% $RCSfile: proj_report_outline.tex,v $
+%% $Revision: 1.2 $
+%% $Date: 2010/04/23 02:40:16 $
+%% $Author: kevin $
+
+\documentclass[11pt
+              , a4paper
+              , twoside
+              , openright
+              ]{report}
+
+
+\usepackage{float} % lets you have non-floating floats
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{url} % for typesetting urls
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{color}
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+%\newcommand{\bryan}[1]{\textcolor{darkgreen}{[BN: #1]}}
+
+%
+%  We don't want figures to float so we define
+%
+\newfloat{fig}{thp}{lof}[chapter]
+\floatname{fig}{Figure}
+
+%% These are standard LaTeX definitions for the document
+%%
+
+\title{{\Huge BSc Hons Handbook ---
+2021}\vspace{1cm}\\ ELCO489, CGRA489, COMP489, and AIML487 \\
+
+(Individual Research Project)}
+
+%% Original authors of the document, David J. Pearce, Christopher Hollitt
+%% Edition, 2014 Sharon Gao and Kris Bubendorfer, added new sections on
+%% the allocation process
+%% Edition, 2015 Kris Bubendorfer, added chapter on supervision
+%% Edition 2019 Ramesh Rayudu, added on industry projects, changed all Bryan's highlights, changed COMP489 description
+%% Edition 2020 Ramesh Rayudu, changed dates
+%% Edition 2021 Simon McCallum, converted to more research and less engineering
+%% Edition 2022 Simon McCallum, updating content including word limits and ethics.
+
+%% This file can be used for creating a wide range of reports
+%%  across various Schools
+%%
+%% Set up some things, mostly for the front page, for your specific document
+%
+% Current options are:
+% [ecs|msor]              Which school you are in.
+%
+% [bschonscomp|mcompsci]  Which degree you are doing
+%                          You can also specify any other degree by name
+%                          (see below)
+% [font|image]            Use a font or an image for the VUW logo
+%                          The font option will only work on ECS systems
+%
+\usepackage{vuwhandbook}
+
+% You should specifiy your supervisor here with
+%     \supervisor{Firstname Lastname}
+% use \supervisors if there is more than one supervisor
+
+% Unless you've used the bschonscomp or mcompsci
+%  options above use
+%   \otherdegree{OTHER DEGREE OR DIPLOMA NAME}
+% here to specify degree
+
+% Comment this out if you want the date printed.
+\date{}
+
+\newcommand{\bsc}{{\bf COMP} or {\bf ELCO }}
+\newcommand{\ai}{{\bf AIML}}
+
+
+\begin{document}
+
+% Make the page numbering roman, until after the contents, etc.
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{abstract}
+
+%   The ENGR489, ELCO489, CGRA489, COMP489 and COMP588 individual research
+%   project is a major undertaking for both students and staff.  This document
+%   describes in detail the requirements for these courses, and provides some
+%   additional guidelines.
+
+%   Staff expect that students are completely familiar with the contents
+%   of this document.  Questions regarding this document should be
+%   discussed with the supervisor (where appropriate) or the course
+%   coordinator (otherwise).
+
+% \end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% individual chapters included here
+\include{introduction}
+\input{allocation}
+\input{Supervision}
+\input{progress}
+\input{finalreport}
+\input{presentation}
+%\input{assessment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{acm}
+%\bibliography{sample}
+
+
+\end{document}

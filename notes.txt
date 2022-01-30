@@ -1,0 +1,7 @@
+Notes:
+
+Must add explicit statement regarding social and ethical issues.  E.g. something to back up the graduate attribute:
+
+ "Justify the quality of your solution through effective written and oral communication, and through practical demonstration. Quality issues include, but are not limited to: the selection of appropriate technology; application of appropriate engineering and professional practices; consideration of real-world issues, such as scalability, reliability, safety and sustainability (where appropriate). "
+
+Could add explicit statement encouraging students to get involved in their wider research groups.  Perhaps along some general guidelines as to how manage their time and stress, etc.  This might also help encourage greater participation in the research groups.
