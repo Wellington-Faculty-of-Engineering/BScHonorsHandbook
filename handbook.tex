@@ -5,8 +5,7 @@
 
 \documentclass[11pt
               , a4paper
-              , twoside
-              , openright
+              , oneside
               ]{report}
 
 
@@ -34,8 +33,8 @@
 %% These are standard LaTeX definitions for the document
 %%
 
-\title{{\Huge BSc Hons Handbook ---
-2021}\vspace{1cm}\\ ELCO489, CGRA489, COMP489, and AIML487 \\
+\title{{\Huge BSc Hons Handbook
+2022}\vspace{1cm}\\ ELCO489, CGRA489, COMP489, and AIML487 \\
 
 (Individual Research Project)}
 
@@ -76,9 +75,14 @@
 % Comment this out if you want the date printed.
 \date{}
 
-\newcommand{\bsc}{{\bf COMP} or {\bf ELCO }}
+% creating new commands as macros
+\newcommand{\bsc}{{\bf COMP}, {\bf CGRA}, or {\bf ELCO }}
 \newcommand{\ai}{{\bf AIML}}
 
+% crating new commands for commenting
+\newcommand{\n}[1]{{\color{green}{#1}}}
+% renewcommand{\n}[1]{} % this removes all notes from the pdf
+\newcommand{\dn}[1]{} % this is used for notes and are done.
 
 \begin{document}
 
@@ -89,19 +93,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{abstract}
+ \begin{abstract}
 
-%   The ENGR489, ELCO489, CGRA489, COMP489 and COMP588 individual research
-%   project is a major undertaking for both students and staff.  This document
-%   describes in detail the requirements for these courses, and provides some
-%   additional guidelines.
+   The ELCO489, CGRA489, and COMP489 are an individual research
+   project which is a major undertaking for both students and staff.  This document
+   describes in detail the requirements for these courses, and provides some
+   additional guidelines.
 
-%   Staff expect that students are completely familiar with the contents
-%   of this document.  Questions regarding this document should be
-%   discussed with the supervisor (where appropriate) or the course
-%   coordinator (otherwise).
+   Staff expect that students are completely familiar with the contents
+   of this document.  Questions regarding this document should be
+   discussed with the supervisor (where appropriate) or the course
+   coordinator (otherwise).
 
-% \end{abstract}
+ \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
